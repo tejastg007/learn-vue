@@ -1,0 +1,44 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #ccc;
+	height: 100vh;
+}
+
+.container {
+	width: 600px;
+	margin: 40px auto 0px;
+	background-color: white;
+	padding: 25px 30px;
+	border-radius: 10px;
+}
+
+.container input,
+.container button {
+	display: inline-block;
+	width: 100%;
+	border: 1px solid rgb(195, 195, 195);
+	padding: 10px 15px;
+	margin: 10px 0px;
+	border-radius: 5px;
+	outline: none;
+}
+
+.container button {
+	background-color: black;
+	color: white;
+}
+
+.taskContainer ul {
+	list-style-type: none;
+}
+
+.taskContainer ul li {
+	padding: 5px 10px;
+	border-bottom: 1px solid gray;
+	background-color: rgb(176, 175, 175);
+}
