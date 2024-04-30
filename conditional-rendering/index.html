@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div id="todoApp">
+        <div class="container">
+            <input type="text" v-model="enteredGoal">
+            <button @click="addGoal">Add Goal</button>
+            <div class="goalsContainer">
+                <p v-if="goals.length==0">No Goal have been added</p>
+                <ul v-else-if="goals.length>0">
+                    <li v-for="(goal,index) in goals" :key="goal" @click="deleteGoal(index)"> {{goal}}
+                        <input type="text" @click.stop>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
