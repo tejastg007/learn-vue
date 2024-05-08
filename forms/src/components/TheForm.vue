@@ -87,6 +87,9 @@
 				<label for="how-other">Other</label>
 			</div>
 		</div>
+		<div class="form-control">
+			<feedback-ratings v-model="feedbackRating"></feedback-ratings>
+		</div>
 		<div>
 			<button>Save Data</button>
 		</div>
@@ -94,7 +97,12 @@
 </template>
 
 <script>
+import FeedbackRatings from "./FeedbackRatings.vue";
+
 export default {
+	components: {
+		FeedbackRatings,
+	},
 	data() {
 		return {
 			userName: "",
@@ -102,22 +110,24 @@ export default {
 			userReferrer: "wom",
 			interests: [],
 			how: "",
+			feedbackRating: "",
 		};
 	},
 	methods: {
-		submitForm(e) {
-			console.log("name");
+		submitForm() {
+			console.log("name:--");
 			console.log(this.userName);
-			console.log("age");
+			console.log("age:--");
 			console.log(this.userAge);
-			console.log("referrer");
+			console.log("referrer:--");
 			console.log(this.userReferrer);
-			console.log("interests");
+			console.log("interests:--");
 			console.log(this.interests);
-			console.log("how learn");
+			console.log("how learn:--");
 			console.log(this.how);
-			console.log(e);
-			console.log(this.$refs.UserForm);
+			console.log("feedback rating:---");
+			console.log(this.feedbackRating);
+			this.feedbackRating = null;
 			this.$refs.UserForm.reset();
 		},
 	},
